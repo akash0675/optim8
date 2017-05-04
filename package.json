@@ -1,0 +1,28 @@
+{
+  "name": "optim8",
+  "version": "1.0.0",
+  "description": "css framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "css",
+    "framework",
+    "scss",
+    "grid",
+    "8px"
+  ],
+  "author": "Akash Talreja",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.28.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "node-sass": "^4.5.2",
+    "sass-loader": "^6.0.3",
+    "webpack": "^2.5.0"
+  },
+  "dependencies": {
+    "global": "^4.3.2"
+  }
+}
