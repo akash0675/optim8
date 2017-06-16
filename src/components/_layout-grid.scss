@@ -1,0 +1,40 @@
+@import "./../modules/variables";
+@import "./../modules/mixins";
+
+.layout-grid {
+  @include layout-grid($layout-grid-default-margin, $layout-grid-default-gutter);
+}
+
+
+.layout-grid__cell {
+  @include layout-grid-cell($layout-grid-default-gutter);
+
+  @each $size in map-keys($layout-grid-columns) {
+    @include layout-grid-media-query_($size) {
+      @for $span from 1 through map-get($layout-grid-columns, desktop) {
+        @at-root .layout-grid__cell--span-#{$span},
+          .layout-grid__cell--span-#{$span}-#{$size}.layout-grid__cell--span-#{$span}-#{$size} {
+          @include layput-grid-cell-span_($size, $span, $layout-grid-default-gutter);
+        }
+      }
+    }
+  }
+
+  @for $i from 1 through map-get($layout-grid-columns, desktop) {
+    &--order-#{$i} {
+      @include layout-grid-cell-order($i);
+    }
+  }
+
+  &--align-top {
+    @include layout-grid-cell-align(top);
+  }
+
+  &--align-middle {
+    @include layout-grid-cell-align(middle);
+  }
+
+  &--align-bottom {
+    @include layout-grid-cell-align(bottom);
+  }
+}

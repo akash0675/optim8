@@ -1,0 +1,19 @@
+// layout-variables
+
+$layout-grid-breakpoints: (
+  desktop: 840px,
+  tablet: 480px,
+  phone: 0px,
+) !default;
+
+$layout-grid-columns: (
+  desktop: 12,
+  tablet: 8,
+  phone: 4
+) !default;
+
+$layout-grid-default-column-span: 4 !default;
+$layout-grid-default-margin: 16px !default;
+$layout-grid-default-gutter: 16px !default;
+
+//
